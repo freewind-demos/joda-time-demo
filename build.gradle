@@ -8,7 +8,8 @@ repositories {
 
 dependencies {
     compile(
-            'org.apache.commons:commons-lang3:3.4'
+            'org.apache.commons:commons-lang3:3.4',
+            'joda-time:joda-time:2.9.4'
     )
     testCompile(
             'junit:junit:4.11',
