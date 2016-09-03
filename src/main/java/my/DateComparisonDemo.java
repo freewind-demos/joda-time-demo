@@ -5,13 +5,20 @@ import org.joda.time.DateTime;
 public class DateComparisonDemo {
 
     public static void main(String[] args) {
-        DateTime dateTime = new DateTime();
-        DateTime dateTime2 = new DateTime();
-        System.out.println(isSameDay(dateTime, dateTime2));
+        checkSameDay();
+        checkSameMonth();
     }
 
-    private static boolean isSameDay(DateTime dateTime, DateTime dateTime2) {
-        return dateTime.withTimeAtStartOfDay().isEqual(dateTime2.withTimeAtStartOfDay());
+    private static void checkSameDay() {
+        DateTime dateTime = new DateTime();
+        DateTime dateTime2 = new DateTime();
+        System.out.println(dateTime.withTimeAtStartOfDay().isEqual(dateTime2.withTimeAtStartOfDay()));
+    }
+
+    private static void checkSameMonth() {
+        DateTime dateTime = new DateTime();
+        DateTime dateTime2 = new DateTime();
+        System.out.println(dateTime.withDayOfMonth(0).isEqual(dateTime2.withDayOfMonth(0)));
     }
 
 }
